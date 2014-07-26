@@ -447,4 +447,4 @@ class Environment(object):
                 f.write(source)
 
     def is_public(self, logical_path):
-        return any(condition(logical_path) for condition in self.public_assets)
+        return any([condition(logical_path) for condition in self.public_assets])
